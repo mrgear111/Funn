@@ -5,16 +5,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .a{
-            background-color: red;
-            height: 200px;
+        .body{
+            padding: 100px;
+        }
+        .right{
             width: 100px;
-            
+            height: 120px;
+            background-color: #1a1e1d;
+            border-radius: 50%;
+            animation: squish 1s infinite alternate;
+
+        }
+        .right1{
+            margin-top: -120px;
+            margin-left: 10px;
+            width: 80px;
+            height: 120px;
+            background-color: #a8c082;
+            border-radius: 50%;
+            animation: squish 1s infinite alternate;
+
+        }
+        .right2{
+            margin-top: -120px;
+            margin-left: 20px;
+            width: 60px;
+            height: 120px;
+            background-color: #1a1e1d;
+            border-radius: 50%;
+            animation: squish 1s infinite alternate;
+
+        }
+        .right3{
+            margin-top: -120px;
+            margin-left: 30px;
+            width: 40px;
+            height: 120px;
+            background-color:#a8c082;
+            border-radius: 50%;
+            animation: squish 1s infinite alternate;
+
+        }
+        .right4{
+            margin-top: -120px;
+            margin-left: 45px;
+            width: 10px;
+            height: 120px;
+            background-color: #1a1e1d;
+            border-radius: 50%;
+            animation: squish 1s infinite alternate;
+        }
+        .main{
+            width: 100px;
+            height: 120px;
+            animation:  rotateAndBounce 2s infinite alternate;
+        }
+
+        @keyframes bounce {
+        from {
+            transform: scaleY(1);
+            transform: translateY(10);
+            }
+            to {
+              transform: scaleY(2);
+              transform: translateY(150px);
+            }
+        }
+        @keyframes squish {
+        from {
+            transform: scaleY(1.5);
+            }
+            to {
+              transform: scaleY(1);
+            }
+        }
+
+        @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+            }
+            to {
+              transform: rotate(180deg);
+            }
+        }
+        @keyframes rotateAndBounce {
+            0% {
+                transform: rotate(0deg) translateY(0);
+            }
+            100% {
+                transform: rotate(360deg) translateY(150px);
+            }
         }
     </style>
 </head>
 <body>
-    <div class="a"></div>
+    <div class="main">
+        <div class="right"></div>
+        <div class="right1"></div>
+        <div class="right2"></div>
+        <div class="right3"></div>
+        <div class="right4"></div>
+    </div>
     
 </body>
 </html>
